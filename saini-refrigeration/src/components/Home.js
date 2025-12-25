@@ -1,0 +1,50 @@
+///home page product 
+
+const latest = [
+        { id: 1, name: "Smart Inverter AC", price: "₹38,999", img: "/img/products/acc.jpg", star: 2, description: "A smart inverter AC is a modern cooling solution designed to deliver consistent comfort while optimizing energy usage. It adjusts its compressor speed based on room temperature, ensuring efficient cooling without frequent power fluctuations. This technology helps maintain a stable indoor environment, reduces electricity consumption, and supports longer appliance life. Smart features allow users to control settings through mobile applications, making operation convenient and user friendly. The AC operates quietly, providing a peaceful atmosphere for homes and offices. It is suitable for different weather conditions and adapts quickly to temperature changes. Advanced sensors help regulate airflow and cooling performance, enhancing overall comfort. The design focuses on reliability, efficiency, and ease of use, making it a practical choice for daily living. With improved temperature control and reduced power usage, a smart inverter AC offers a balance of performance, comfort, and modern convenience for today’s lifestyle.", },
+        { id: 2, name: "Smart Refrigerator", price: "₹27,999", img: "/img/products/coler.webp", star: 3, description: "A smart refrigerator is an advanced home appliance designed to make food storage more efficient and convenient. It uses intelligent technology to monitor temperature, humidity, and usage patterns to keep food fresh for a longer time. With built in sensors and digital controls, it automatically adjusts cooling based on the load inside. Many smart refrigerators allow users to track groceries, manage expiration dates, and receive alerts through connected devices. This helps reduce food waste and improves daily kitchen organization. The appliance operates with high energy efficiency, supporting lower electricity consumption while delivering reliable performance. Its quiet operation and modern design make it suitable for both homes and offices. A smart refrigerator also supports better hygiene by maintaining consistent cooling conditions. Overall, it combines innovation, efficiency, and convenience, making everyday food management easier and more organized for a modern lifestyle." },
+        { id: 3, name: "Smart Water Purifier", price: "₹11,999", img: "/img/products/double door.avif", star: 5, description: "A smart water purifier is a modern solution designed to provide safe and clean drinking water with advanced technology. It uses intelligent filtration systems to remove impurities, bacteria, and harmful substances while retaining essential minerals. Built in sensors continuously monitor water quality and filter performance to ensure consistent purification. The purifier can automatically adjust its operation based on water input and usage patterns, improving efficiency and reliability. Smart indicators alert users when filters need replacement or maintenance, reducing manual effort and guesswork. Its energy efficient operation supports regular use without excessive power consumption. The compact and sleek design fits easily into modern kitchens while offering quiet performance. A smart water purifier helps promote better health by delivering purified water consistently. Overall, it combines safety, efficiency, and convenience, making it an essential appliance for maintaining a healthy and dependable water supply in everyday life." },
+        { id: 4, name: "Turbo Washing Machine", price: "₹24,499", img: "/img/products/double.jpg", star: 4, description: "A turbo washing machine is designed to deliver fast and effective laundry cleaning with improved performance. It uses powerful washing action to remove tough stains while being gentle on fabrics. The machine optimizes water movement and detergent distribution to ensure clothes are cleaned evenly in less time. With efficient motor technology, it reduces wash cycles and saves energy without compromising results. Its sturdy build supports long term use and consistent operation. User friendly controls make it easy to select different wash programs based on fabric type and load size. The washing process remains smooth and relatively quiet, adding comfort to daily use. A turbo washing machine is suitable for busy households where time efficiency and reliable cleaning are important. Overall, it offers a balance of speed, durability, and effective washing performance for everyday laundry needs." },
+]
+const our = [
+        { id: 1, name: "Split AC 1.5 Ton", price: "₹34,999", img: "/img/products/acc.jpg", star: 3 },
+        { id: 2, name: "Double Door Refrigerator", price: "₹25,499", img: "/img/products/coler.webp", star: 5 },
+        { id: 3, name: "Air Cooler Heavy Duty", price: "₹9,999", img: "/img/products/double door.avif", star: 1 },
+        { id: 4, name: "Washing Machine Front Load", price: "₹21,499", img: "/img/products/double.jpg", star: 4 },
+        { id: 5, name: "Window AC 1 Ton", price: "₹28,499", img: "/img/products/wash.webp", star: 2 },
+        { id: 6, name: "Mini Refrigerator", price: "₹15,499", img: "/img/products/Product 2.webp", star: 5 },
+        { id: 7, name: "Water Purifier RO+UV", price: "₹9,999", img: "/img/products/Product 3.webp", star: 2 },
+        { id: 8, name: "Portable Cooler", price: "₹7,499", img: "/img/products/Product 4.webp", star: 3 },
+]
+const best = [
+        { id: 1, name: "Smart Inverter AC", price: "₹38,999", img: "/img/products/acc.jpg", star: 3 },
+        { id: 2, name: "Smart Refrigerator", price: "₹27,999", img: "/img/products/coler.webp", star: 5 },
+        { id: 3, name: "Smart Water Purifier", price: "₹11,999", img: "/img/products/double door.avif", star: 4 },
+        { id: 4, name: "Turbo Washing Machine", price: "₹24,499", img: "/img/products/double.jpg", star: 2 },
+]
+
+const service = [
+        {
+                img: '/img/washingRepair.jpg',
+                name: "Washing Machine repair",
+                description: "Washing machine repair services focus on restoring proper function and performance to ensure smooth daily use. These services address common issues such as water leakage, drum problems, unusual noise, and electrical faults. Skilled technicians inspect the machine carefully to identify the root cause and apply effective solutions. Timely repair helps prevent further damage and extends the lifespan of the appliance. Professional repair work also improves washing efficiency and reduces unnecessary power or water usage. Replacement of faulty parts is done using reliable components to maintain safety and performance. Regular maintenance and repair can help avoid sudden breakdowns and costly replacements. Washing machine repair services are suitable for both home and commercial use, offering convenience and dependable support. Overall, proper repair ensures consistent operation, better efficiency, and long term reliability of the washing machine.",
+        },
+        {
+                img: '/img/WaterRepair.png',
+                name: "Water Cooler repair",
+                description: "Water cooler repair services are designed to restore the functionality of water coolers, ensuring they provide a consistent supply of cold water. These services address common issues such as water leakage, pump problems, electrical malfunctions, and filter clogs. Skilled technicians perform thorough inspections to identify the root cause and implement effective solutions. Timely repair helps prevent further damage and extends the lifespan of the appliance. Professional repair work also ensures a reliable water supply, reducing water wastage and energy consumption. Regular maintenance and repair can prevent sudden breakdowns and costly replacements. Water cooler repair services are essential for both home and office use, offering convenience and dependable support. Overall, proper repair ensures consistent operation, better efficiency, and long term reliability of the water cooler.",
+        },
+        {
+                img: '/img/fridgeRepair.jpg',
+                name: "Refrigerator repair",
+                description: "Refrigerator repair services are designed to restore the functionality of refrigerators, ensuring they maintain proper cooling and food preservation. These services address common issues such as water leakage, pump problems, electrical malfunctions, and filter clogs. Skilled technicians perform thorough inspections to identify the root cause and implement effective solutions. Timely repair helps prevent further damage and extends the lifespan of the appliance. Professional repair work also ensures a reliable water supply, reducing water wastage and energy consumption. Regular maintenance and repair can prevent sudden breakdowns and costly replacements. Refrigerator repair services are essential for both home and office use, offering convenience and dependable support. Overall, proper repair ensures consistent operation, better efficiency, and long term reliability of the refrigerator.",
+        },
+        {
+                img: '/img/AcRepair.webp',
+                name: "Ac repair",
+                description: "Ac repair services are designed to restore the functionality of air conditioners, ensuring they provide comfortable cooling and heating. These services address common issues such as water leakage, pump problems, electrical malfunctions, and filter clogs. Skilled technicians perform thorough inspections to identify the root cause and implement effective solutions. Timely repair helps prevent further damage and extends the lifespan of the appliance. Professional repair work also ensures a reliable water supply, reducing water wastage and energy consumption. Regular maintenance and repair can prevent sudden breakdowns and costly replacements. Ac repair services are essential for both home and office use, offering convenience and dependable support. Overall, proper repair ensures consistent operation, better efficiency, and long term reliability of the ac.",
+        },
+]
+
+
+export { latest, our, best, service };

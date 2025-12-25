@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <title>Saini Refrigeration</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap"
+                rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Animate.css for animations -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+                * {
+                        box-sizing: border-box;
+                }
+
+                html,
+                body {
+                        margin: 0;
+                        padding: 0;
+                        overflow-x: hidden;
+                        width: 100%;
+                }
+
+                img {
+                        max-width: 100%;
+                        height: auto;
+                        display: block;
+                }
+
+                /* ✅ Topbar Styling */
+                .topbar {
+                        background-color: #000;
+                        color: #aaa;
+                        font-size: 14px;
+                }
+
+                .topbar a {
+                        color: #aaa;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                }
+
+                .topbar a:hover {
+                        color: #ffc107;
+                }
+
+                /* ✅ Navbar Styling */
+                .navbar {
+                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+
+                .navbar-nav .nav-link {
+                        font-weight: 500;
+                        transition: color 0.3s ease;
+                }
+
+                .navbar-nav .nav-link:hover {
+                        color: #0057b8;
+                }
+
+                .nav-item .dropdown-menu {
+                        border: none;
+                        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+                }
+
+                .btn-square {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                }
+
+                /* ✅ Right-side Cart Modal */
+                .modal-dialog-right {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        margin: 0;
+                        width: 100%;
+                        max-width: 450px;
+                        height: 100%;
+                        transform: translateX(100%);
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        pointer-events: none;
+                }
+
+                .modal.fade.show .modal-dialog-right {
+                        transform: translateX(0);
+                        pointer-events: auto;
+                }
+
+                .modal-dialog-right .modal-content {
+                        height: 100%;
+                        border: none;
+                        border-radius: 0;
+                        overflow-y: auto;
+                        background-color: #f8f9fa;
+                        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+                }
+
+                /* ✅ Orange-themed Quote Modal */
+                #quoteModal .modal-content {
+                        border-radius: 1rem;
+                        overflow: hidden;
+                }
+
+                #quoteModal .modal-body {
+                        background-color: #fdf5f0;
+                }
+
+                #quoteModal .form-control,
+                #quoteModal .form-select,
+                #quoteModal textarea {
+                        border: 1px solid #e0a060;
+                        transition: all 0.3s ease;
+                        padding: 0.6rem 0.75rem;
+                }
+
+                #quoteModal .form-control:focus,
+                #quoteModal .form-select:focus,
+                #quoteModal textarea:focus {
+                        border-color: #ff6600;
+                        box-shadow: 0 0 5px rgba(255, 102, 0, 0.4);
+                        outline: none;
+                }
+
+                .btn-orange {
+                        background-color: #ff6600;
+                        border-color: #ff6600;
+                        color: white;
+                        transition: all 0.3s ease;
+                }
+
+                .btn-orange:hover {
+                        background-color: #e65c00;
+                        border-color: #e65c00;
+                }
+
+                /* ✅ Responsive Navbar */
+                @media (max-width: 576px) {
+                        .navbar-brand {
+                                margin-left: 0 !important;
+                                margin-right: auto !important;
+                        }
+
+                        .navbar-nav {
+                                width: 100%;
+                                align-items: flex-start;
+                        }
+
+                        .modal-dialog-right {
+                                max-width: 100%;
+                        }
+                }
+
+                .service-item {
+                        overflow: hidden;
+                        transition: transform 0.3s ease;
+                        background: #fff;
+                        height: 350px;
+                        display: flex;
+                        flex-direction: column;
+                }
+
+                .service-item:hover {
+                        transform: scale(1.03);
+                }
+
+                .service-item img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                        transition: transform 0.3s ease;
+                        flex-shrink: 0;
+                }
+
+                .service-item:hover img {
+                        transform: scale(1.05);
+                }
+
+                .service-item .bg-light {
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+
+                .service-item h5 {
+                        color: #333;
+                        font-weight: 600;
+                        text-align: center;
+                }
+
+                .service-item:hover h5 {
+                        color: orange;
+                }
+
+                /*Slider start*/
+                /* Slider Image Fix */
+                #header-carousel .carousel-item img {
+                        width: 100%;
+                        height: 600px;
+                        object-fit: cover;
+                        object-position: center;
+                }
+
+                /* Responsive Height */
+                @media (max-width: 1200px) {
+                        #header-carousel .carousel-item img {
+                                height: 500px;
+                        }
+                }
+
+                @media (max-width: 768px) {
+                        #header-carousel .carousel-item img {
+                                height: 350px;
+                        }
+                }
+
+                @media (max-width: 480px) {
+                        #header-carousel .carousel-item img {
+                                height: 250px;
+                        }
+
+                        #header-carousel .carousel-caption h1 {
+                                font-size: 1.8rem;
+                        }
+
+                        #header-carousel .carousel-caption p {
+                                font-size: 0.9rem;
+                        }
+
+                        #header-carousel .carousel-caption .btn {
+                                padding: 0.5rem 1rem;
+                                font-size: 0.8rem;
+                        }
+                }
+
+                /*slider end*/
+
+                /*Features*/
+                .btn-square {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+
+                h1.display-6 {
+                        color: #0d6efd;
+                }
+
+                span {
+                        color: #555;
+                }
+
+                /* Spinner Style */
+                #spinner {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        width: 100vw;
+                        height: 100vh;
+                        background: white;
+                        z-index: 9999;
+                        transform: translate(-50%, -50%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+
+                #spinner.hide {
+                        display: none;
+                }
+
+                /* testimonial start*/
+                .testimonial-item {
+                        background: #fff;
+                        border-radius: 15px;
+                        padding: 30px 20px;
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+                        transition: all 0.3s ease;
+                }
+
+                .testimonial-item:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+                }
+
+                .testimonial-item img {
+                        border: 3px solid #007bff;
+                        padding: 3px;
+                }
+
+                .testimonial-left img,
+                .testimonial-right img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        animation-duration: 3s;
+                }
+
+                .animated.pulse.infinite {
+                        animation: pulse 2.5s infinite;
+                }
+
+                @keyframes pulse {
+                        0% {
+                                transform: scale(1);
+                        }
+
+                        50% {
+                                transform: scale(1.05);
+                        }
+
+                        100% {
+                                transform: scale(1);
+                        }
+                }
+
+                /* Responsive */
+                @media (max-width: 991px) {
+
+                        .testimonial-left,
+                        .testimonial-right {
+                                display: none !important;
+                        }
+                }
+
+                /*team section css*/
+                .team-item {
+                        border-radius: 12px;
+                        overflow: hidden;
+                        background: #fff;
+                        transition: all 0.4s ease;
+                }
+
+                .team-item:hover {
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                        transform: translateY(-5px);
+                }
+
+                .team-img img {
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                }
+
+                .team-social {
+                        position: absolute;
+                        bottom: -60px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        background: rgba(0, 123, 255, 0.85);
+                        padding: 10px 0;
+                        transition: all 0.4s ease;
+                }
+
+                .team-item:hover .team-social {
+                        bottom: 0;
+                }
+
+                .team-social .btn {
+                        color: #fff;
+                        border: none;
+                }
+
+                .team-social .btn:hover {
+                        background: #fff;
+                        color: #007bff;
+                }
+
+                .bg-light {
+                        background: #f8f9fa !important;
+                }
+
+                .team-item h5 {
+                        margin-bottom: 5px;
+                        font-weight: 600;
+                        color: #222;
+                }
+
+                .team-item span {
+                        font-size: 14px;
+                }
+
+                /*services start */
+                .product-item {
+                        background: #fff;
+                        border: 1px solid #eee;
+                        border-radius: 12px;
+                        overflow: hidden;
+                        text-align: center;
+                        transition: all 0.3s ease;
+                        padding-bottom: 20px;
+                }
+
+                .product-item:hover {
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+                        transform: translateY(-5px);
+                }
+
+                .product-item img {
+                        width: 100%;
+                        height: 270px;
+                        object-fit: contain;
+                        background-color: #f9f9f9;
+                        transition: transform 0.3s ease;
+                        padding: 20px;
+                }
+
+                .product-item:hover img {
+                        transform: scale(1.05);
+                }
+
+                .product-info {
+                        padding: 15px;
+                }
+
+                .product-info p.brand-name {
+                        color: #999;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                }
+
+                .product-info h5 {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #222;
+                        margin-bottom: 8px;
+                        transition: color 0.3s;
+                }
+
+                .product-info h5:hover {
+                        color: #007bff;
+                }
+
+                .star {
+                        color: #f8b400;
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                }
+
+                .product-price {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #111;
+                }
+
+                .product-price del {
+                        color: #999;
+                        font-weight: 400;
+                        font-size: 14px;
+                        margin-left: 5px;
+                }
+
+                .add-to-cart-btn {
+                        margin-top: 12px;
+                        background: #007bff;
+                        border: none;
+                        border-radius: 30px;
+                        font-size: 14px;
+                        color: #fff;
+                        padding: 8px 12px;
+                        transition: background 0.3s ease;
+                }
+
+                .add-to-cart-btn:hover {
+                        background: #0056b3;
+                }
+
+                @media (max-width: 991px) {
+                        .product-item img {
+                                height: 240px;
+                        }
+                }
+
+                @media (max-width: 767px) {
+                        .product-item img {
+                                height: 220px;
+                        }
+                }
+
+                /* ✅ Footer Styling */
+                .footer {
+                        background-color: #0d0d0d;
+                        color: #ffffff;
+                        font-family: 'Poppins', sans-serif;
+                }
+
+                .footer a {
+                        color: #cccccc;
+                        text-decoration: none;
+                }
+
+                .footer a:hover {
+                        color: #ffc107;
+                        text-decoration: underline;
+                }
+
+                .btn-link {
+                        display: block;
+                        padding: 0;
+                        margin-bottom: 10px;
+                        color: #aaa;
+                        transition: color 0.3s ease;
+                }
+
+                .btn-link:hover {
+                        color: #ffc107;
+                }
+
+                .btn-square {
+                        width: 40px;
+                        height: 40px;
+                        background-color: #ffc107;
+                        color: #000;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+                }
+
+                .btn-square:hover {
+                        background-color: #fff;
+                        color: #0d6efd;
+                }
+
+                .copyright {
+                        background-color: #111111;
+                        font-size: 14px;
+                }
+
+                .copyright-link {
+                        color: #ffffff;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                }
+
+                .copyright-link:hover {
+                        color: #ffc107;
+                }
+
+                /* ✅ FIXED: Why Choose Us Image Styling */
+                .position-relative.rounded.overflow-hidden.h-100 img {
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: cover !important;
+                }
+
+                /* Cart Badge */
+                .cart-badge {
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        font-size: 0.7em;
+                }
+        </style>
+</head>
+
+<body>
+        <!-- Spinner Start -->
+        <div id="spinner">
+                <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+        <header class="bg-dark py-3 text-white text-center">
+
+                <!-- ✅ Topbar Start -->
+                <div class="container-fluid topbar py-2 px-0 d-none d-lg-block">
+                        <div class="row gx-0 align-items-center">
+                                <div class="col-lg-7 px-5 text-start">
+                                        <div class="h-100 d-inline-flex align-items-center me-4">
+                                                <small class="fa fa-phone-alt me-2"></small>
+                                                <small>7891346525</small>
+                                        </div>
+                                        <div class="h-100 d-inline-flex align-items-center me-4">
+                                                <small class="far fa-envelope-open me-2"></small>
+                                                <small>keshavkumarsaini286@gmail.com</small>
+                                        </div>
+                                </div>
+                                <div class="col-lg-5 px-5 text-end">
+                                        <ol class="breadcrumb justify-content-end mb-0">
+                                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Terms</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Privacy</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Support</a></li>
+                                        </ol>
+                                </div>
+                        </div>
+                </div>
+                <!-- ✅ Topbar End -->
+
+                <!-- ✅ Navbar Start -->
+                <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+                        <a href="#" class="navbar-brand d-flex align-items-center" style="margin-left:60px;">
+                                <h1 class="m-0" style="margin-right:120px;">
+                                        <img class="img-fluid me-3" src="img/logo/logo.png"
+                                                alt="Saini Refrigeration Logo" style="width:150px; height:auto;">
+                                </h1>
+                        </a>
+
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                                data-bs-target="#navbarCollapse">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                                        <a href="#" class="nav-item nav-link active">Home</a>
+                                        <a href="#" class="nav-item nav-link">About Us</a>
+                                        <a href="#" class="nav-item nav-link">Our Services</a>
+                                        <a href="#" class="nav-item nav-link">Products</a>
+                                        <div class="nav-item dropdown">
+                                                <a href="#" class="nav-link dropdown-toggle"
+                                                        data-bs-toggle="dropdown">Pages</a>
+                                                <div class="dropdown-menu bg-light border-0 m-0">
+                                                        <a href="#" class="dropdown-item">Features</a>
+                                                        <a href="#" class="dropdown-item">Free Quote</a>
+                                                        <a href="#" class="dropdown-item">Our Team</a>
+                                                        <a href="#" class="dropdown-item">Testimonial</a>
+                                                        <a href="#" class="dropdown-item">404 Page</a>
+                                                </div>
+                                        </div>
+                                        <a href="#" class="nav-item nav-link">Contact Us</a>
+                                </div>
+
+                                <!-- ✅ Buttons -->
+                                <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                                        <button class="btn btn-square bg-primary text-white me-2 position-relative"
+                                                data-bs-toggle="modal" data-bs-target="#cartModal" id="cartButton">
+                                                <i class="bi bi-cart"></i>
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge"
+                                                        id="cartBadge" style="display:none;">0</span>
+                                        </button>
+                                        <button class="btn btn-square bg-primary text-white" data-bs-toggle="modal"
+                                                data-bs-target="#quoteModal">
+                                                <i class="bi bi-chat-quote"></i>
+                                        </button>
+                                </div>
+                        </div>
+                </nav>
+                <!-- ✅ Navbar End -->
+
+                <!-- 🛒 Cart Modal -->
+                <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-right">
+                                <div class="modal-content">
+                                        <div class="modal-header bg-primary text-white">
+                                                <h5 class="modal-title"><i class="bi bi-cart me-2"></i>Your Cart</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                                <div id="cartItems">
+                                                        <div id="emptyCartMessage" class="text-center py-3 text-muted">
+                                                                Your cart is empty.
+                                                        </div>
+                                                </div>
+                                                <div
+                                                        class="d-flex justify-content-between align-items-center pt-3 border-top mt-3">
+                                                        <h6 class="fw-bold mb-0">Total:</h6>
+                                                        <h5 class="fw-bold text-success mb-0" id="cartTotal">₹0</h5>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary"
+                                                        data-bs-dismiss="modal">Continue Shopping</button>
+                                                <button type="button" class="btn btn-primary"
+                                                        id="proceedToCheckoutBtn">Proceed to Checkout</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- 🛒 Cart Modal End -->
+
+                <!-- ✅ Checkout Modal -->
+                <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                        <div class="modal-header bg-success text-white">
+                                                <h5 class="modal-title"><i class="bi bi-credit-card me-2"></i>Checkout
+                                                </h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                                <form id="checkoutForm">
+                                                        <!-- Shipping Address -->
+                                                        <div class="mb-3">
+                                                                <label for="shippingAddress"
+                                                                        class="form-label fw-bold">Shipping
+                                                                        Address</label>
+                                                                <textarea class="form-control" id="shippingAddress"
+                                                                        rows="3"
+                                                                        placeholder="Enter your full shipping address"
+                                                                        required></textarea>
+                                                        </div>
+                                                        <!-- Payment Method -->
+                                                        <div class="mb-3">
+                                                                <label for="paymentMethod"
+                                                                        class="form-label fw-bold">Payment
+                                                                        Method</label>
+                                                                <select class="form-select" id="paymentMethod" required>
+                                                                        <option value="" disabled selected>Select
+                                                                                payment method</option>
+                                                                        <option value="cod">Cash on Delivery (COD)
+                                                                        </option>
+                                                                        <option value="card">Credit/Debit Card</option>
+                                                                        <option value="upi">UPI</option>
+                                                                </select>
+                                                        </div>
+                                                        <!-- Order Summary -->
+                                                        <div id="checkoutCartSummary"
+                                                                class="border p-3 rounded bg-light">
+                                                                <!-- Dynamically populated -->
+                                                        </div>
+                                                </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Back to Cart</button>
+                                                <button type="submit" class="btn btn-success" form="checkoutForm">Place
+                                                        Order</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- ✅ Checkout Modal End -->
+
+                <!-- 📝 Quote Modal -->
+                <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content rounded-4 shadow-lg border-0">
+                                        <div class="modal-header p-3"
+                                                style="background: linear-gradient(135deg, #ff6600, #e65c00);">
+                                                <h5 class="modal-title text-white fw-bold"><i
+                                                                class="bi bi-chat-quote me-2"></i>Get a Quick Quote</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <div class="modal-body p-4 bg-light">
+                                                <form id="quoteForm">
+                                                        <div class="mb-3">
+                                                                <label class="form-label fw-semibold">Full Name</label>
+                                                                <input type="text"
+                                                                        class="form-control rounded-3 shadow-sm"
+                                                                        placeholder="Enter your name" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                                <label class="form-label fw-semibold">Email
+                                                                        Address</label>
+                                                                <input type="email"
+                                                                        class="form-control rounded-3 shadow-sm"
+                                                                        placeholder="Enter your email" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                                <label class="form-label fw-semibold">Service
+                                                                        Required</label>
+                                                                <select class="form-select rounded-3 shadow-sm"
+                                                                        required>
+                                                                        <option value="" disabled selected>Select a
+                                                                                service</option>
+                                                                        <option>Refrigerator Repair</option>
+                                                                        <option>AC Maintenance</option>
+                                                                        <option>Other</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                                <label class="form-label fw-semibold">Message</label>
+                                                                <textarea class="form-control rounded-3 shadow-sm"
+                                                                        rows="4"
+                                                                        placeholder="Describe your requirements"></textarea>
+                                                        </div>
+                                                </form>
+                                        </div>
+
+                                        <div class="modal-footer bg-light border-0 d-flex justify-content-between">
+                                                <button type="button" class="btn btn-outline-secondary rounded-3 px-4"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-orange rounded-3 px-4"
+                                                        form="quoteForm">Submit Quote</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- 📝 Quote Modal End -->
+                <h1 class="m-0">Saini Refrigeration</h1>
+        </header>
+        <!-- Header End -->
+
+        <!-- Carousel Start -->
+        <section id="carousel" class="text-center bg-light py-5">
+                <h2>Welcome to Our Cooling & Heating Services</h2>
+                <p>High-quality refrigeration and air conditioning solutions for homes and businesses.</p>
+
+                <div class="container-fluid p-0 mb-5">
+                        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="true"
+                                data-bs-interval="3000">
+                                <div class="carousel-inner">
+                                        <!-- Slide 1 -->
+                                        <div class="carousel-item active">
+                                                <img class="w-100" src="img/slider/slider 3.jpg"
+                                                        alt="Quality Cooling Solutions"
+                                                        onerror="this.src='https://via.placeholder.com/1920x600?text=Slide+1'">
+                                                <div
+                                                        class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                                                        <div class="col-lg-7 pt-5 text-center">
+                                                                <h1
+                                                                        class="display-4 text-white mb-4 animate__animated animate__fadeInDown">
+                                                                        Quality Cooling Solutions</h1>
+                                                                <p
+                                                                        class="fs-5 text-white mb-4 pb-2 mx-sm-5 animate__animated animate__fadeInUp">
+                                                                        Reliable and energy-efficient cooling systems
+                                                                        designed for comfort and performance.
+                                                                </p>
+                                                                <a href="#"
+                                                                        class="btn btn-primary py-3 px-5 animate__animated animate__fadeInUp"
+                                                                        style="animation-delay: 1s;">Explore More</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <!-- Slide 2 -->
+                                        <div class="carousel-item">
+                                                <img class="w-100" src="img/slider/slider 2.jpeg"
+                                                        alt="Expert Heating Services"
+                                                        onerror="this.src='https://via.placeholder.com/1920x600?text=Slide+2'">
+                                                <div
+                                                        class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                                                        <div class="col-lg-7 pt-5 text-center">
+                                                                <h1
+                                                                        class="display-4 text-white mb-4 animate__animated animate__fadeInDown">
+                                                                        Expert Heating Services</h1>
+                                                                <p
+                                                                        class="fs-5 text-white mb-4 pb-2 mx-sm-5 animate__animated animate__fadeInUp">
+                                                                        Stay warm in winters with our professional
+                                                                        heating installation and repair services.
+                                                                </p>
+                                                                <a href="#"
+                                                                        class="btn btn-primary py-3 px-5 animate__animated animate__fadeInUp"
+                                                                        style="animation-delay: 1s;">Learn More</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <!-- Slide 3 -->
+                                        <div class="carousel-item">
+                                                <img class="w-100" src="img/slider/slider 1.jpeg"
+                                                        alt="Maintenance and Support"
+                                                        onerror="this.src='https://via.placeholder.com/1920x600?text=Slide+3'">
+                                                <div
+                                                        class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                                                        <div class="col-lg-7 pt-5 text-center">
+                                                                <h1
+                                                                        class="display-4 text-white mb-4 animate__animated animate__fadeInDown">
+                                                                        Maintenance and Support</h1>
+                                                                <p
+                                                                        class="fs-5 text-white mb-4 pb-2 mx-sm-5 animate__animated animate__fadeInUp">
+                                                                        Ensure long-lasting performance with our expert
+                                                                        maintenance and 24/7 support services.
+                                                                </p>
+                                                                <a href="#"
+                                                                        class="btn btn-primary py-3 px-5 animate__animated animate__fadeInUp"
+                                                                        style="animation-delay: 1s;">Contact Us</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Carousel Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                </button>
+                        </div>
+                </div>
+        </section>
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+        <section id="about" class="container py-5">
+                <div class="text-center mb-5">
+                        <h2>About Us</h2>
+                        <p>We are a professional team specializing in installation and maintenance of heating & cooling
+                                systems.</p>
+                        <div class="container-xxl py-5">
+                                <div class="container">
+                                        <div class="row g-5 align-items-center">
+                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                                                        <div class="h-100">
+                                                                <h1 class="display-6 mb-5">Your Trusted Experts in
+                                                                        Heating & Cooling Solutions</h1>
+                                                                <div class="row g-4 mb-4">
+                                                                        <div class="col-sm-6">
+                                                                                <div class="d-flex align-items-center">
+                                                                                        <img class="flex-shrink-0 me-3"
+                                                                                                src="img/icon/icon-07-primary.png"
+                                                                                                alt="">
+                                                                                        <h5 class="mb-0">Certified
+                                                                                                Technicians</h5>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                                <div class="d-flex align-items-center">
+                                                                                        <img class="flex-shrink-0 me-3"
+                                                                                                src="img/icon/icon-09-primary.png"
+                                                                                                alt="">
+                                                                                        <h5 class="mb-0">Reliable &
+                                                                                                Efficient Service</h5>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <p class="mb-4">We provide top-notch heating and cooling
+                                                                        services with a focus on quality, reliability,
+                                                                        and customer satisfaction. Our team ensures
+                                                                        every installation, repair, or maintenance task
+                                                                        is done with precision and care.</p>
+                                                                <div class="border-top mt-4 pt-4">
+                                                                        <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                        <div
+                                                                                                class="d-flex align-items-center">
+                                                                                                <div
+                                                                                                        class="btn-lg-square bg-primary rounded-circle me-3">
+                                                                                                        <i
+                                                                                                                class="fa fa-phone-alt text-white"></i>
+                                                                                                </div>
+                                                                                                <h5 class="mb-0">
+                                                                                                        7891346525 </h5>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div
+                                                                                        class="col-12 col-sm-6 d-flex align-items-center">
+                                                                                        <div
+                                                                                                class="btn-lg-square bg-primary rounded-circle me-3 d-flex align-items-center justify-content-center">
+                                                                                                <i
+                                                                                                        class="fa fa-envelope text-white"></i>
+                                                                                        </div>
+                                                                                        <h5 class="mb-0 text-truncate"
+                                                                                                style="max-width: calc(100% - 50px);">
+                                                                                                keshavkumarsaini286@gmail.com
+                                                                                        </h5>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                        <div class="row g-3">
+                                                                <div class="col-6 text-start">
+                                                                        <img class="img-fluid w-75 wow zoomIn"
+                                                                                data-wow-delay="0.7s"
+                                                                                src="img/about/about3.webp">
+                                                                </div>
+                                                                <div class="col-6 text-end">
+                                                                        <img class="img-fluid w-50 wow zoomIn"
+                                                                                data-wow-delay="0.5s"
+                                                                                src="img/about/about 4.webp">
+                                                                </div>
+                                                                <div class="col-6 text-start">
+                                                                        <img class="img-fluid w-100 wow zoomIn"
+                                                                                data-wow-delay="0.3s"
+                                                                                src="img/about/about_2-removebg-preview.png">
+                                                                </div>
+                                                                <div class="col-6 text-end">
+                                                                        <img class="img-fluid w-50 wow zoomIn"
+                                                                                data-wow-delay="0.5s"
+                                                                                src="img/about/about 4.webp">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- About End -->
+
+        <!-- Services Section Start -->
+        <div class="container-xxl py-5">
+                <div class="container">
+                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                                <h1 class="display-6 mb-5">We Provide Professional Heating & Cooling Services</h1>
+                        </div>
+
+                        <div class="row g-4 justify-content-center">
+                                <!-- Example Service Cards (replaces database content) -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="service-item border rounded shadow-sm text-center h-100">
+                                                <img src="img/service-1.jpg" alt="AC Installation"
+                                                        onerror="this.src=':'">
+                                                <div class="bg-light p-3">
+                                                        <h5 class="mb-0">AC Installation</h5>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="service-item border rounded shadow-sm text-center h-100">
+                                                <img src="img/service-2.jpg" alt="Refrigerator Repair"
+                                                        onerror="this.src=' ">
+                                                <div class="bg-light p-3">
+                                                        <h5 class="mb-0">Refrigerator Repair</h5>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="service-item border rounded shadow-sm text-center h-100">
+                                                <img src="img/service-3.jpg" alt="Cooling Maintenance"
+                                                        onerror="this.src=':'">
+                                                <div class="bg-light p-3">
+                                                        <h5 class="mb-0">Cooling Maintenance</h5>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="service-item border rounded shadow-sm text-center h-100">
+                                                <img src="img/service-4.jpg" alt="Heating System Setup"
+                                                        onerror="this.src=':'">
+                                                <div class="bg-light p-3">
+                                                        <h5 class="mb-0">Heating System Setup</h5>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Services Section End -->
+
+        <!-- ✅ Products Section Start -->
+        <div class="container-xxl py-5">
+                <div class="container">
+                        <div class="text-center mb-5">
+                                <h2 class="display-6 fw-bold">Explore Our Latest Products</h2>
+                                <p class="text-muted">High-quality, reliable, and affordable cooling & home appliances.
+                                </p>
+                        </div>
+
+                        <div class="row g-4">
+                                <!-- ✅ Product 1 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="product-item">
+                                                <img src="img/products/acc.jpg" alt="AC Model 1"
+                                                        onerror="this.src='https://via.placeholder.com/300x270?text=Split+AC'">
+                                                <div class="product-info">
+                                                        <p class="brand-name">Saini Refrigeration</p>
+                                                        <h5>Split AC 1.5 Ton</h5>
+                                                        <div class="star">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-half-alt"></i>
+                                                        </div>
+                                                        <div class="product-price">
+                                                                ₹34,999
+                                                                <del>₹36,499</del>
+                                                        </div>
+                                                        <button type="button" class="btn btn-sm w-100 add-to-cart-btn"
+                                                                data-id="1" data-name="Split AC 1.5 Ton"
+                                                                data-price="34999" data-image="img/products/acc.jpg">
+                                                                <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- ✅ Product 2 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="product-item">
+                                                <img src="img/products/double.jpg" alt="Refrigerator Model 1"
+                                                        onerror="this.src='https://via.placeholder.com/300x270?text=Fridge'">
+                                                <div class="product-info">
+                                                        <p class="brand-name">Saini Refrigeration</p>
+                                                        <h5>Double Door Refrigerator</h5>
+                                                        <div class="star">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-half-alt"></i>
+                                                        </div>
+                                                        <div class="product-price">
+                                                                ₹25,499
+                                                                <del>₹26,999</del>
+                                                        </div>
+                                                        <button type="button" class="btn btn-sm w-100 add-to-cart-btn"
+                                                                data-id="2" data-name="Double Door Refrigerator"
+                                                                data-price="25499" data-image="img/products/double.jpg">
+                                                                <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- ✅ Product 3 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="product-item">
+                                                <img src="img/products/coler.webp" alt="Air Cooler Model 1"
+                                                        onerror="this.src='https://via.placeholder.com/300x270?text=Cooler'">
+                                                <div class="product-info">
+                                                        <p class="brand-name">Saini Refrigeration</p>
+                                                        <h5>Air Cooler (Heavy Duty)</h5>
+                                                        <div class="star">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-half-alt"></i>
+                                                        </div>
+                                                        <div class="product-price">
+                                                                ₹9,999
+                                                                <del>₹10,499</del>
+                                                        </div>
+                                                        <button type="button" class="btn btn-sm w-100 add-to-cart-btn"
+                                                                data-id="3" data-name="Air Cooler (Heavy Duty)"
+                                                                data-price="9999" data-image="img/products/coler.webp">
+                                                                <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- ✅ Product 4 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="product-item">
+                                                <img src="img/products/wash.webp" alt="Washing Machine Model 1"
+                                                        onerror="this.src='https://via.placeholder.com/300x270?text=Washing+Machine'">
+                                                <div class="product-info">
+                                                        <p class="brand-name">Saini Refrigeration</p>
+                                                        <h5>Washing Machine (Front Load)</h5>
+                                                        <div class="star">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-half-alt"></i>
+                                                        </div>
+                                                        <div class="product-price">
+                                                                ₹21,499
+                                                                <del>₹22,499</del>
+                                                        </div>
+                                                        <button type="button" class="btn btn-sm w-100 add-to-cart-btn"
+                                                                data-id="4" data-name="Washing Machine (Front Load)"
+                                                                data-price="21499"
+                                                                data-image="img/products/washing.jpg">
+                                                                <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- ✅ Products Section End -->
+
+        <!-- Features Start -->
+        <section class="bg-light py-5 text-center">
+                <div class="container">
+                        <h3 class="mb-3">Why Choose Us?</h3>
+                        <p>Professional technicians, affordable pricing, and 24/7 service availability.</p>
+
+                        <!-- Why Choose Us Section -->
+                        <div class="container-xxl py-5">
+                                <div class="container">
+                                        <div class="row g-5">
+                                                <!-- Text Content -->
+                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                                                        <h1 class="display-6 mb-5">Why Customers Choose Our Services
+                                                        </h1>
+                                                        <p class="mb-5">
+                                                                We provide fast, reliable, and affordable HVAC
+                                                                solutions. From AC repair to heating installation, our
+                                                                certified technicians ensure your comfort all year
+                                                                round.
+                                                        </p>
+
+                                                        <!-- Reason 1 -->
+                                                        <div class="d-flex mb-5">
+                                                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle"
+                                                                        style="width: 90px; height: 90px;">
+                                                                        <img class="img-fluid"
+                                                                                src="img/icon/icon-08-light.png"
+                                                                                alt="Trusted Service Center"
+                                                                                onerror="this.src='https://via.placeholder.com/90x90?text=1'">
+                                                                </div>
+                                                                <div class="ms-4">
+                                                                        <h5 class="mb-3">Trusted Service Center</h5>
+                                                                        <span>Our experienced technicians provide
+                                                                                reliable and high-quality service for
+                                                                                both residential and commercial
+                                                                                clients.</span>
+                                                                </div>
+                                                        </div>
+
+                                                        <!-- Reason 2 -->
+                                                        <div class="d-flex mb-5">
+                                                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle"
+                                                                        style="width: 90px; height: 90px;">
+                                                                        <img class="img-fluid"
+                                                                                src="img/icon/icon-10-light.png"
+                                                                                alt="Reasonable Price"
+                                                                                onerror="this.src='https://via.placeholder.com/90x90?text=2'">
+                                                                </div>
+                                                                <div class="ms-4">
+                                                                        <h5 class="mb-3">Affordable Pricing</h5>
+                                                                        <span>We offer competitive rates without
+                                                                                compromising quality, ensuring you get
+                                                                                the best value for your
+                                                                                investment.</span>
+                                                                </div>
+                                                        </div>
+
+                                                        <!-- Reason 3 -->
+                                                        <div class="d-flex mb-0">
+                                                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle"
+                                                                        style="width: 90px; height: 90px;">
+                                                                        <img class="img-fluid"
+                                                                                src="img/icon/icon-06-light.png"
+                                                                                alt="24/7 Support"
+                                                                                onerror="this.src='https://via.placeholder.com/90x90?text=3'">
+                                                                </div>
+                                                                <div class="ms-4">
+                                                                        <h5 class="mb-3">24/7 Support</h5>
+                                                                        <span>Our team is available around the clock to
+                                                                                handle emergencies and ensure your
+                                                                                heating and cooling systems run
+                                                                                smoothly.</span>
+                                                                </div>
+                                                        </div>
+                                                </div>
+
+                                                <!-- FIXED Image Content -->
+                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                                                        <div class="position-relative" style="">
+                                                                <img class="position-absolute" src="img/service-3.jpg"
+                                                                        alt="HVAC Services" onerror="this.src='https:">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Features End -->
+
+        <!-- Team Section Start -->
+        <div class="container-xxl py-5">
+                <div class="container">
+                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                                <h1 class="display-6 mb-5">Meet Our Professional Team Members</h1>
+                        </div>
+
+                        <div class="row g-4">
+                                <!-- Team Member 1 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="team-item">
+                                                <div class="team-img position-relative overflow-hidden">
+                                                        <img class="img-fluid" src="img/team-1.jpg" alt="John Smith"
+                                                                onerror="this.src='https://via.placeholder.com/300x300?text=John'">
+                                                        <div class="team-social">
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-facebook-f"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-twitter"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-instagram"></i></a>
+                                                        </div>
+                                                </div>
+                                                <div class="bg-light text-center p-4">
+                                                        <h5>John Smith</h5>
+                                                        <span class="text-primary">Founder & CEO</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Team Member 2 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="team-item">
+                                                <div class="team-img position-relative overflow-hidden">
+                                                        <img class="img-fluid" src="img/team-2.jpg" alt="Emily Johnson"
+                                                                onerror="this.src='https:">
+                                                        <div class="team-social">
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-facebook-f"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-twitter"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-instagram"></i></a>
+                                                        </div>
+                                                </div>
+                                                <div class="bg-light text-center p-4">
+                                                        <h5>Emily Johnson</h5>
+                                                        <span class="text-primary">Project Manager</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Team Member 3 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="team-item">
+                                                <div class="team-img position-relative overflow-hidden">
+                                                        <img class="img-fluid" src="img/team-3.jpg" alt="Michael Brown"
+                                                                onerror="this.src='https://via.placeholder.com/300x300?text=Michael'">
+                                                        <div class="team-social">
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-facebook-f"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-twitter"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-instagram"></i></a>
+                                                        </div>
+                                                </div>
+                                                <div class="bg-light text-center p-4">
+                                                        <h5>Michael Brown</h5>
+                                                        <span class="text-primary">Senior Engineer</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Team Member 4 -->
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="team-item">
+                                                <div class="team-img position-relative overflow-hidden">
+                                                        <img class="img-fluid" src="img/team-4.jpg" alt="Sophia Davis"
+                                                                onerror="this.src='https:">
+                                                        <div class="team-social">
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-facebook-f"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-twitter"></i></a>
+                                                                <a class="btn btn-square btn-primary rounded-circle m-1"
+                                                                        href="#"><i class="fab fa-instagram"></i></a>
+                                                        </div>
+                                                </div>
+                                                <div class="bg-light text-center p-4">
+                                                        <h5>Sophia Davis</h5>
+                                                        <span class="text-primary">Customer Support Lead</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Team Section End -->
+
+        <!-- Testimonials Section Start -->
+        <div class="container-xxl py-5">
+                <div class="container">
+                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                                <h1 class="display-6 mb-5">What They Say About Our Services</h1>
+                        </div>
+
+                        <div class="row g-5">
+                                <!-- Left Avatars -->
+                                <div class="col-lg-3 d-none d-lg-block">
+                                        <div
+                                                class="testimonial-left h-100 d-flex flex-column justify-content-around align-items-center">
+                                                <img class="img-fluid animated pulse infinite mb-3"
+                                                        src="img/avatars/avatar 1.jpeg" alt="Client 1"
+                                                        onerror="this.src='https:">
+                                                <img class="img-fluid animated pulse infinite mb-3"
+                                                        src="img/avatars/avatar 2.webp" alt="Client 2"
+                                                        onerror="this.src='https:">
+                                                <img class="img-fluid animated pulse infinite"
+                                                        src="img/avatars/avatar 3.png" alt="Client 3"
+                                                        onerror="this.src='https:">
+                                        </div>
+                                </div>
+
+                                <!-- Center Testimonials -->
+                                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                        <div class="testimonial-carousel owl-carousel">
+                                                <!-- Testimonial 1 -->
+                                                <div class="testimonial-item text-center">
+                                                        <img class="img-fluid mx-auto mb-4 rounded-circle shadow-sm"
+                                                                src="img/avatars/avatar 1.jpeg" alt="Mohit" width="100"
+                                                                onerror="this.src='https:">
+                                                        <p class="fs-5 fst-italic text-muted">
+                                                                “The team repaired my AC in no time! Professional,
+                                                                punctual, and affordable. Highly recommend their
+                                                                services.”
+                                                        </p>
+                                                        <h5 class="mt-3 mb-1">Mohit</h5>
+                                                        <span class="text-primary">Homeowner</span>
+                                                </div>
+
+                                                <!-- Testimonial 2 -->
+                                                <div class="testimonial-item text-center">
+                                                        <img class="img-fluid mx-auto mb-4 rounded-circle shadow-sm"
+                                                                src="img/avatars/avatar 2.webp" alt="Vijay" width="100"
+                                                                onerror="this.src='https:">
+                                                        <p class="fs-5 fst-italic text-muted">
+                                                                “Excellent service! They installed our new AC
+                                                                flawlessly. Friendly staff and great follow-up support.”
+                                                        </p>
+                                                        <h5 class="mt-3 mb-1">Vijay</h5>
+                                                        <span class="text-primary">Apartment Owner</span>
+                                                </div>
+
+                                                <!-- Testimonial 3 -->
+                                                <div class="testimonial-item text-center">
+                                                        <img class="img-fluid mx-auto mb-4 rounded-circle shadow-sm"
+                                                                src="img/avatars/avatar 3.png" alt="Sunil" width="100"
+                                                                onerror="this.src='https:">
+                                                        <p class="fs-5 fst-italic text-muted">
+                                                                “I had a heating problem during winter, and they fixed
+                                                                it quickly. Knowledgeable and courteous technicians.”
+                                                        </p>
+                                                        <h5 class="mt-3 mb-1">Sunil</h5>
+                                                        <span class="text-primary">Business Owner</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Right Avatars -->
+                                <div class="col-lg-3 d-none d-lg-block">
+                                        <div
+                                                class="testimonial-right h-100 d-flex flex-column justify-content-around align-items-center">
+                                                <img class="img-fluid animated pulse infinite mb-3"
+                                                        src="img/avatars/avatar 1.jpeg" alt="Client 4"
+                                                        onerror="this.src='https:">
+                                                <img class="img-fluid animated pulse infinite mb-3"
+                                                        src="img/avatars/avatar 2.webp" alt="Client 5"
+                                                        onerror="this.src='https:">
+                                                <img class="img-fluid animated pulse infinite"
+                                                        src="img/avatars/avatar 3.png" alt="Client 6"
+                                                        onerror="this.src='https:">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Testimonials Section End -->
+
+        <!-- Footer Start -->
+        <footer class="bg-dark text-white text-center py-4">
+                <!-- ✅ Footer Section -->
+                <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="container py-5">
+                                <div class="row g-5">
+                                        <!-- About / Brand -->
+                                        <div class="col-md-6">
+                                                <h1 class="text-white mb-4">
+                                                        <img class="img-fluid me-3" src="img/logo/logo.png"
+                                                                style="width: 100px; height:auto; border-radius: 50%;"
+                                                                alt="">
+                                                        Saini Refrigeration
+                                                </h1>
+                                                <span>
+                                                        Saini Refrigeration provides top-quality refrigeration and AC
+                                                        services across Neemrana and nearby areas.
+                                                        We specialize in installation, maintenance, and repair for
+                                                        residential and commercial clients, ensuring reliable and
+                                                        energy-efficient cooling solutions.
+                                                </span>
+                                        </div>
+
+                                        <!-- Newsletter -->
+                                        <div class="col-md-6">
+                                                <h5 class="text-light mb-4">Subscribe to Our Newsletter</h5>
+                                                <p>Receive updates on offers, maintenance tips, and latest services
+                                                        directly in your inbox.</p>
+                                                <div class="position-relative">
+                                                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                                                                type="email" placeholder="Enter your email">
+                                                        <button type="button"
+                                                                class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                                                </div>
+                                        </div>
+
+                                        <!-- Contact Info -->
+                                        <div class="col-lg-3 col-md-6">
+                                                <h5 class="text-light mb-4 mt-5 mt-md-0">Contact Us</h5>
+                                                <p><i class="fa fa-map-marker-alt me-3"></i>00, Near ICICI Bank,
+                                                        Neemrana, Alwar-301705, Rajasthan, India</p>
+                                                <p><i class="fa fa-phone-alt me-3"></i> +91 7891346525</p>
+                                                <p><i class="fa fa-envelope me-3"></i> keshavkumarsaini286@gmail.com</p>
+                                        </div>
+
+                                        <!-- Services -->
+                                        <div class="col-lg-3 col-md-6">
+                                                <h5 class="text-light mb-4 mt-5 mt-md-0">Our Services</h5>
+                                                <a class="btn btn-link" href="#">AC Installation</a>
+                                                <a class="btn btn-link" href="#">Refrigerator Repair</a>
+                                                <a class="btn btn-link" href="#">Cooling Solutions</a>
+                                                <a class="btn btn-link" href="#">Maintenance & Repairs</a>
+                                        </div>
+
+                                        <!-- Quick Links -->
+                                        <div class="col-lg-3 col-md-6">
+                                                <h5 class="text-light mb-4 mt-5 mt-md-0">Quick Links</h5>
+                                                <a class="btn btn-link" href="about.php">About Us</a>
+                                                <a class="btn btn-link" href="contact.php">Contact Us</a>
+                                                <a class="btn btn-link" href="servicess.php">Our Services</a>
+                                                <a class="btn btn-link" href="privacy.php">Privacy Policy</a>
+                                        </div>
+
+                                        <!-- Social Media -->
+                                        <div class="col-lg-3 col-md-6">
+                                                <h5 class="text-light mb-4 mt-5 mt-md-0">Follow Us</h5>
+                                                <div class="d-flex">
+                                                        <a class="btn btn-square rounded-circle me-2" href="#"><i
+                                                                        class="fab fa-twitter"></i></a>
+                                                        <a class="btn btn-square rounded-circle me-2" href="#"><i
+                                                                        class="fab fa-facebook-f"></i></a>
+                                                        <a class="btn btn-square rounded-circle me-2" href="#"><i
+                                                                        class="fab fa-youtube"></i></a>
+                                                        <a class="btn btn-square rounded-circle me-2" href="#"><i
+                                                                        class="fab fa-linkedin-in"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-- Copyright -->
+                        <div class="container-fluid copyright py-3">
+                                <div class="container">
+                                        <div class="row">
+                                                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 text-white">
+                                                        &copy; <span id="currentYear"></span> <a href="#"
+                                                                class="copyright-link">Saini Refrigeration</a>. All
+                                                        Rights Reserved.
+                                                </div>
+                                                <div class="col-md-6 text-center text-md-end text-white">
+                                                        Designed & Developed by <a href="#"
+                                                                class="copyright-link">Web4Solution</a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <p class="mb-0">&copy; 2025 Saini Refrigeration | All Rights Reserved</p>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
+                <i class="bi bi-arrow-up"></i>
+        </a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+
+        <!-- Custom JS -->
+        <script>
+                // Spinner hide
+                window.addEventListener('load', function () {
+                        document.getElementById('spinner').classList.add('hide');
+                });
+
+                // Initialize animations
+                new WOW().init();
+
+                // FIXED: Initialize Carousel
+                document.addEventListener('DOMContentLoaded', function () {
+                        var carouselEl = document.querySelector('#header-carousel');
+                        var carousel = new bootstrap.Carousel(carouselEl, {
+                                interval: 3000,
+                                wrap: true,
+                                ride: 'carousel'
+                        });
+
+                        // Re-apply animations on slide change
+                        carouselEl.addEventListener('slide.bs.carousel', function (event) {
+                                var animatedElems = event.target.querySelectorAll('.animate__animated');
+                                animatedElems.forEach(function (el) {
+                                        el.classList.remove('animate__animated');
+                                        void el.offsetWidth; // Trigger reflow
+                                        el.classList.add('animate__animated');
+                                });
+                        });
+                });
+
+                // Owl Carousel for Testimonials
+                $('.testimonial-carousel').owlCarousel({
+                        autoplay: true,
+                        smartSpeed: 1000,
+                        dots: true,
+                        loop: true,
+                        items: 1,
+                        margin: 20
+                });
+
+                // Current Year
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+                // Cart Functionality
+                document.addEventListener('DOMContentLoaded', function () {
+                        const cartItemsContainer = document.getElementById('cartItems');
+                        const emptyCartMessage = document.getElementById('emptyCartMessage');
+                        const cartTotalElement = document.getElementById('cartTotal');
+                        const cartBadge = document.getElementById('cartBadge');
+                        const proceedBtn = document.getElementById('proceedToCheckoutBtn');
+
+                        function updateCartTotal() {
+                                let total = 0;
+                                const items = cartItemsContainer.querySelectorAll('.cart-item');
+                                items.forEach(item => {
+                                        const price = parseFloat(item.getAttribute('data-price'));
+                                        const qty = parseInt(item.querySelector('.qty-input').value || 1);
+                                        total += price * qty;
+                                });
+                                cartTotalElement.textContent = `₹${total.toLocaleString('en-IN')}`;
+                                emptyCartMessage.style.display = items.length === 0 ? 'block' : 'none';
+                                updateBadge();
+                        }
+
+                        function updateBadge() {
+                                const items = cartItemsContainer.querySelectorAll('.cart-item');
+                                const count = items.length;
+                                cartBadge.textContent = count;
+                                cartBadge.style.display = count > 0 ? 'block' : 'none';
+                        }
+
+                        // Add to Cart Buttons
+                        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                                button.addEventListener('click', function () {
+                                        const id = this.dataset.id;
+                                        const name = this.dataset.name;
+                                        const price = parseFloat(this.dataset.price);
+                                        const image = this.dataset.image;
+
+                                        let cartItem = cartItemsContainer.querySelector(`[data-id="${id}"]`);
+                                        if (cartItem) {
+                                                // Update quantity
+                                                const qtyInput = cartItem.querySelector('.qty-input');
+                                                qtyInput.value = parseInt(qtyInput.value) + 1;
+                                        } else {
+                                                // Add new item
+                                                const newItem = document.createElement('div');
+                                                newItem.className = 'cart-item d-flex align-items-center mb-3 p-2 bg-white rounded';
+                                                newItem.setAttribute('data-id', id);
+                                                newItem.setAttribute('data-price', price);
+                                                newItem.innerHTML = `
+              <img src="${image}" alt="${name}" style="width: 50px; height: 50px; object-fit: cover;">
+              <div class="ms-3 flex-grow-1">
+                <h6>${name}</h6>
+                <small>₹${price.toLocaleString('en-IN')}</small>
+              </div>
+              <input type="number" class="qty-input form-control w-25" value="1" min="1" style="width: 60px;">
+              <button class="btn btn-sm btn-danger ms-2 remove-item">×</button>
+            `;
+                                                cartItemsContainer.insertBefore(newItem, emptyCartMessage);
+                                        }
+
+                                        updateCartTotal();
+                                });
+                        });
+
+                        // Remove Item
+                        cartItemsContainer.addEventListener('click', function (e) {
+                                if (e.target.classList.contains('remove-item')) {
+                                        e.target.closest('.cart-item').remove();
+                                        updateCartTotal();
+                                }
+                        });
+
+                        // Quantity Change
+                        cartItemsContainer.addEventListener('input', function (e) {
+                                if (e.target.classList.contains('qty-input')) {
+                                        const val = parseInt(e.target.value);
+                                        if (val < 1) e.target.value = 1;
+                                        updateCartTotal();
+                                }
+                        });
+
+                        // Proceed to Checkout
+                        proceedBtn.addEventListener('click', function () {
+                                const items = cartItemsContainer.querySelectorAll('.cart-item');
+                                if (items.length === 0) return;
+
+                                let summary = '<h6 class="mb-3">Order Summary</h6><ul class="list-unstyled">';
+                                let total = 0;
+                                items.forEach(item => {
+                                        const name = item.querySelector('h6').textContent;
+                                        const price = parseFloat(item.getAttribute('data-price'));
+                                        const qty = parseInt(item.querySelector('.qty-input').value || 1);
+                                        const itemTotal = price * qty;
+                                        total += itemTotal;
+                                        summary += `<li class="d-flex justify-content-between"><span>${name} x${qty}</span><span>₹${itemTotal.toLocaleString('en-IN')}</span></li>`;
+                                });
+                                summary += `</ul><hr><div class="d-flex justify-content-between fw-bold fs-5"><span>Total:</span><span>₹${total.toLocaleString('en-IN')}</span></div>`;
+
+                                document.getElementById('checkoutCartSummary').innerHTML = summary;
+
+                                // Close cart and open checkout
+                                const cartModal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
+                                if (cartModal) cartModal.hide();
+
+                                setTimeout(() => {
+                                        new bootstrap.Modal(document.getElementById('checkoutModal')).show();
+                                }, 300);
+                        });
+
+                        // Checkout Form Submit
+                        document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+                                const address = document.getElementById('shippingAddress').value;
+                                const payment = document.getElementById('paymentMethod').value;
+                                if (!address || !payment) {
+                                        alert('Please fill all fields.');
+                                        return;
+                                }
+                                alert(`Order placed successfully!\nShipping to: ${address}\nPayment: ${payment.toUpperCase()}`);
+                                // Clear cart
+                                cartItemsContainer.innerHTML = '<div id="emptyCartMessage" class="text-center py-3 text-muted">Your cart is empty.</div>';
+                                updateCartTotal();
+                                // Close modal
+                                bootstrap.Modal.getInstance(document.getElementById('checkoutModal')).hide();
+                                this.reset();
+                        });
+
+                        // Quote Form
+                        document.getElementById('quoteForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+                                alert('Quote submitted successfully!');
+                                bootstrap.Modal.getInstance(document.getElementById('quoteModal')).hide();
+                                this.reset();
+                        });
+
+                        // Initial update
+                        updateCartTotal();
+                });
+        </script>
+</body>
+
+</html>
